@@ -1,7 +1,7 @@
 # RSA NOTES - Based on SEED RSA lab
-  This repo acts as notes for understanding basic RSA encryption and the math behind it.  
-  It can be ran using a unix-like system if desired.   
-  Uses Python for simple string conversions, creating a subprocess to run python3.   
+  This repo acts as notes for understanding basic RSA encryption and the math behind it.<br>
+  It can be ran using a unix-like system if desired.<br>
+  Uses Python for simple string conversions, creating a subprocess to run python3.<br>
 
   _Note_:  Does not compute Chinese Remainder Theorem as 
   one _should_ when performing RSA calculations. Signature shown also does not show
@@ -10,11 +10,11 @@
 
 # HOW TO RUN + General info/dependencies
   Uses OpenSSL BIGNUM  
-  Requires unistd subprocesses (use unix-like system) & python3 (written python3.8.10)  
-  compile: _make <insert desired %.c>_ ----- Output as default executable (a.out)  
-          --> example: make step_3_1   --- ./a.out   
-  run: ./a.out  
-  make clean to remove (rm a.out)  
+  Requires unistd subprocesses (use unix-like system) & python3 (written python3.8.10)<br>
+  compile: _make <insert desired %.c>_ ----- Output as default executable (a.out)<br>
+          --> example: make step_3_1   --- ./a.out<br>
+  run: ./a.out<br>
+  make clean to remove (rm a.out)<br>
 
 # NOTATION + MATH 
 - M or m --> message
@@ -25,16 +25,16 @@
 - c --> encrypted output
 - n --> our modulus (p*q)
 
-e: 1 < e < totient(n) && gcd(e, totient(n)) = 1 (coprime)   
-Above, use Extended Euclidean Alg. to validate e. (e * x + totient(n) * y = gcd(e, totient(n))  
+e: 1 < e < totient(n) && gcd(e, totient(n)) = 1 (coprime)<br>
+Above, use Extended Euclidean Alg. to validate e. (e * x + totient(n) * y = gcd(e, totient(n))<br>
 
-d : 1/e mod totient(n) --> same as d*e = 1 mod totient(n)   
-n = p * q   
-totient(n) = (p-1)(q-1)   
-Enc: C = M^e   
-Dec: M = C^d   
+d : 1/e mod totient(n) --> same as d*e = 1 mod totient(n)<br>
+n = p * q<br>
+totient(n) = (p-1)(q-1)<br>  
+Enc: C = M^e<br>   
+Dec: M = C^d<br>
 
-_Reminder_: n,e constitutes the pub key. n,d constitutes the priv key.  
+_Reminder_: n,e constitutes the pub key. n,d constitutes the priv key.<br> 
 
 
 # FILES INCLUDED
